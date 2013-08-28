@@ -6,7 +6,6 @@ var express = require('express'),
    routes = require('./routes'),
    http = require('http'),
    path = require('path'),
-   sass = require('node-sass'),
    app = express(),
    hbs;
 
@@ -24,15 +23,6 @@ hbs = exphbs.create({
 // setting up templating engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
-// setting up SASS preprocessor
-app.use(
-  sass.middleware({
-    src: __dirname + '/public/sass', // where the sass files are 
-    dest: __dirname + '/public/stylesheets', // where css should go
-    debug: true 
-  })
-);
 
 app.use(express.favicon());
 app.use(express.logger('dev'));

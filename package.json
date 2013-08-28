@@ -1,14 +1,23 @@
 {
-  "name": "application-name",
+  "name": "Simon-Says-Code",
+  "description": "A personal website",
   "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
+  "author": "Simon Tam <simon.tam87@gmail.com>",
+  "main": "app.js",
+  "respository": {
+    "type": "git",
+    "url": "https://github.com/simonsayscode/simonsayscode.git"
   },
   "dependencies": {
     "express": "3.3.x",
     "express3-handlebars": "0.5.x",
-    "underscore": "1.5.x",
-    "node-sass": "0.6.x"
+    "underscore": "1.5.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-nodemon": "~0.1.0",
+    "grunt-concurrent": "~0.3.1"
   }
 }
