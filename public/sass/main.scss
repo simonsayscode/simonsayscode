@@ -1,4 +1,21 @@
 body {
    font-family: 'Raleway', sans-serif;
    background-color: #E5E5E5;
+   width: 1024px;
+   margin: 0 auto;
+}
+
+header {
+    height: 150px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+#name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 48px;
+    font-weight: 100;
 }
