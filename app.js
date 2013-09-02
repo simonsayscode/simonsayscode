@@ -1,12 +1,12 @@
 /**
  * Module dependencies.
  */
-var express = require('express'),
-   hbs = require('hbs'),
-   routes = require('./routes'),
-   http = require('http'),
-   path = require('path'),
-   app = express();
+var express = require('express');
+var hbs = require('hbs');
+var routes = require('./routes');
+var http = require('http');
+var path = require('path');
+var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);

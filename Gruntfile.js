@@ -29,13 +29,17 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: 'public/sass/**/*.scss',
-        tasks: ['sass:dev']
+        tasks: ['clean', 'sass:dev']
+      },
+      cssmin: {
+        files: ['public/css/*.css', '!public/css/*.min.css'],
+        tasks: ['cssmin']
       },
       livereload: {
         options: {
           livereload: true
         },
-        files: ['public/stylesheets/**/*.css']
+        files: ['public/css/**/*.css']
       }
     },
     concurrent: {
@@ -50,7 +54,7 @@ module.exports = function(grunt) {
       default: {}
     },
     sass: {
-      dist: {
+      rel: {
         options: {
           style: 'compressed'
         },
@@ -58,7 +62,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'public/sass/',
           src: ['**/*.scss'],
-          dest: 'public/stylesheets/',
+          dest: 'public/css/',
           ext: '.css'
         }]
       },
@@ -70,11 +74,26 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'public/sass/',
           src: ['**/*.scss'],
-          dest: 'public/stylesheets/',
+          dest: 'public/css/',
           ext: '.css'
         }]
       }
-    }
+    },
+    uglify: {
+      rel: {
+        files: {
+          'public/javascript/output.min.js': ['*.js', '!*.min.js']
+        }
+      }
+    },
+    cssmin: {
+      combine:{
+        files: {
+          'public/css/styles.min.css': ['public/css/*.css', 'public/css/!*.min.css']
+        }
+      }
+    },
+    clean: ["public/css/*.min.css", "public/javascript/*.min.js"]
   });
 
   // These plugins provide necessary tasks.
@@ -83,11 +102,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-node-inspector');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task.
-  grunt.registerTask('default', ['concurrent']);
+  grunt.registerTask('default', ['cssmin', 'sass:dev', 'concurrent']);
 
   // Release task.
-  grunt.registerTask('release', ['sass:dist']);
+  grunt.registerTask('release', ['clean', 'sass:rel', 'uglify:rel', 'cssmin']);
 
 };
