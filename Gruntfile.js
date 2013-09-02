@@ -40,11 +40,14 @@ module.exports = function(grunt) {
     },
     concurrent: {
       target: {
-        tasks: ['nodemon', 'watch'],
+        tasks: ['nodemon', 'watch', 'node-inspector'],
         options: {
           logConcurrentOutput: true
         }
       }
+    },
+    'node-inspector': {
+      default: {}
     },
     sass: {
       dist: {
@@ -79,6 +82,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-node-inspector');
 
   // Default task.
   grunt.registerTask('default', ['concurrent']);
