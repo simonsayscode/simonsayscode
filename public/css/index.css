@@ -20,7 +20,7 @@
   display: none;
 }
 
-#about-me-tile {
+#about-me {
   height: 340px;
   width: 580px;
   cursor: pointer;
@@ -57,7 +57,7 @@
   left: 20px;
 }
 
-#resume-tile {
+#resume {
   height: 160px;
   width: 140px;
   cursor: pointer;
@@ -68,7 +68,7 @@
   height: 160px;
   width: 140px;
   position: absolute;
-  background-color: rgba(255, 18, 26, 0.5);
+  background-color: rgba(255, 0, 0, 0.5);
   display: none;
 }
 #resume-hover div {
@@ -85,7 +85,7 @@
   left: 45px;
 }
 
-#stuff-tile {
+#stuff {
   height: 160px;
   width: 264px;
   cursor: pointer;
@@ -113,7 +113,7 @@
   width: 200px;
 }
 #stuff-hover .body a {
-  color: black;
+  color: #2EE400;
 }
 #stuff-hover .icon {
   width: 50px;
@@ -121,7 +121,7 @@
   right: 10px;
 }
 
-#projects-tile {
+#projects {
   height: 160px;
   width: 424px;
   cursor: pointer;

@@ -1,47 +1,51 @@
-define(['jquery'], function ($) {
+define(['jquery', './content'], function ($, content) {
     $(function () {
-        $('#about-me-tile').on({
+        $('#about-me').on({
             'mouseover': function (event) {
                 $('#about-me-hover').show();
-                $('#about-me-tile > .blur').show();
+                $('#about-me > .blur').show();
             },
             'mouseout': function (event) {
                 $('#about-me-hover').hide();
-                $('#about-me-tile > .blur').hide();
+                $('#about-me > .blur').hide();
             }
         });
 
-        $('#resume-tile').on({
+        $('#resume').on({
             'mouseover': function (event) {
                 $('#resume-hover').show();
-                $('#resume-tile > .blur').show();
+                $('#resume > .blur').show();
             },
             'mouseout': function (event) {
                 $('#resume-hover').hide();
-                $('#resume-tile > .blur').hide();
+                $('#resume > .blur').hide();
             }
         });
 
-        $('#stuff-tile').on({
+        $('#stuff').on({
             'mouseover': function (event) {
                 $('#stuff-hover').show();
-                $('#stuff-tile > .blur').show();
+                $('#stuff > .blur').show();
             },
             'mouseout': function (event) {
                 $('#stuff-hover').hide();
-                $('#stuff-tile > .blur').hide();
+                $('#stuff > .blur').hide();
             }
         });
 
-        $('#projects-tile').on({
+        $('#projects').on({
             'mouseover': function (event) {
                 $('#projects-hover').show();
-                $('#projects-tile > .blur').show();
+                $('#projects > .blur').show();
             },
             'mouseout': function (event) {
                 $('#projects-hover').hide();
-                $('#projects-tile > .blur').hide();
+                $('#projects > .blur').hide();
             }
+        });
+
+        $('.tile').on('click', function (event) {
+            content($(event.currentTarget).attr('id'));
         });
 
     });

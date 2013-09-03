@@ -26,7 +26,7 @@
     width: 580px;
 }
 
-#about-me-tile {
+#about-me {
     @include about-me;
     cursor: pointer;
     float: left;
@@ -78,7 +78,7 @@
     width: 140px;
 }
 
-#resume-tile {
+#resume {
     @include resume;
     cursor: pointer;
     float: left;
@@ -88,7 +88,7 @@
     @include resume;
     @include tile-hover;
     position: absolute;
-    background-color: rgba(255, 18, 26, 0.5);
+    background-color: rgba(255, 0, 0, 0.5);
     display: none;
 
     .title {
@@ -107,7 +107,7 @@
     width: 264px;    
 }
 
-#stuff-tile {
+#stuff {
     @include stuff;
     cursor: pointer;
     float: right;
@@ -130,7 +130,7 @@
         width: 200px;
 
         a {
-            color: black;
+            color: #2EE400;
         }
     }
 
@@ -146,7 +146,7 @@
     width: 424px;
 }
 
-#projects-tile {
+#projects {
     @include projects;
     cursor: pointer;
     float: left;
