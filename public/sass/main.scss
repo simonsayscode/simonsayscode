@@ -1,29 +1,67 @@
 body {
-   font-family: 'Raleway', sans-serif;
-   background-color: #E5E5E5;
-   width: 1024px;
-   margin: 0 auto;
+	font-family: 'Raleway', sans-serif;
+	background-color: #E5E5E5;
+	width: 1024px;
+	margin: 0 auto;
 }
 
 header {
-    height: 150px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid black;
-    position: relative;
+	height: 150px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
+	position: relative;
 }
 
 #name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 48px;
-    font-weight: 100;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 48px;
+	font-weight: 100;
+}
+
+#linked-in {
+	position: absolute;
+	bottom: 10px;
+	right: 56px;
+	width: 32px;
+	height: 32px;
+
+	background-image: url('../images/icon-li.png');
+	&:hover {		
+		background-image: url('../images/icon-li-active.png');
+	}
+}
+
+#email {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+	width: 46px;
+	height: 32px;
+
+	background-image: url('../images/icon-email.png');
+	&:hover {		
+		background-image: url('../images/icon-email-active.png');
+	}
 }
 
 .clearfix:after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+div {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	&:hover {
+		text-decoration: underline;
+	}
 }

@@ -3,6 +3,10 @@
     width: 1024px;
     background-image: url('../images/bg.png');
     position: relative;
+
+    img {
+        position: absolute;
+    }
 }
 
 #main-1 {
@@ -13,93 +17,163 @@
     margin-bottom:20px;
 }
 
-@mixin hover {
-    height: 100%;
-    width: 100%;
-    opacity: 0.8;
+.blur {
+    display: none;
+}
+
+@mixin about-me {
+    height: 340px;
+    width: 580px;
 }
 
 #about-me-tile {
-    height: 340px;
-    width: 580px;
+    @include about-me;
+    cursor: pointer;
     float: left;
-    background-image: url('../images/about-me.png');
 }
 
 #about-me-hover {
-    @include hover;
-
-    background-color: #8CC63F;
+    @include about-me;
+    position: absolute;
+    background-color: rgba(140, 198, 63, 0.5);
+    display: none;
 
     .title {
+        height: 100%;
+        width: 200px;
         color: white;
         font-size: 32pt;
+        float: left;
+        padding: 20px;
     }
 
     .body {
+        height: 100%;
+        width: 380px;
+        float: right;
+        font-size: 16pt;
+        padding-top: 75px;
 
-    }    
+        a {
+            color: white;
+        }
+    }
+
+    .icon {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+@mixin tile-hover {
+    div {
+        padding-top: 5px;
+        padding-left: 10px;
+        color: white;
+    }
+}
+
+@mixin resume {
+    height: 160px;
+    width: 140px;
 }
 
 #resume-tile {
-    height: 160px;
-    width: 140px;
-    background-image: url('../images/resume.png');
+    @include resume;
+    cursor: pointer;
     float: left;
 }
 
 #resume-hover {
-    @include hover;
-    background-color: #ED1C24;
+    @include resume;
+    @include tile-hover;
+    position: absolute;
+    background-color: rgba(255, 18, 26, 0.5);
+    display: none;
 
     .title {
-        color: white;
         font-size: 20pt;
     }
 
-    .body {
+    .icon {
+        width: 50px;
+        bottom: 35px;
+        left: 45px;
+    }
+}
 
-    }    
+@mixin stuff {
+    height: 160px;
+    width: 264px;    
 }
 
 #stuff-tile {
-    height: 160px;
-    width: 264px;
-    background-image: url('../images/stuff.png');
+    @include stuff;
+    cursor: pointer;
     float: right;
 }
 
 #stuff-hover {
-    @include hover;
-    background-color: #00A99D;
+    @include stuff;
+    @include tile-hover;
+    position: absolute;
+    height: 160px;
+    width: 264px;
+    background-color: rgba(0, 169, 157, 0.5);
+    display: none;
 
     .title {
-        color: white;
         font-size: 20pt;
     }
 
     .body {
+        width: 200px;
 
-    }    
+        a {
+            color: black;
+        }
+    }
+
+    .icon {
+        width: 50px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@mixin projects {
+    height: 160px;
+    width: 424px;
 }
 
 #projects-tile {
-    height: 160px;
-    width: 424px;
-    background-image: url('../images/projects.png');
+    @include projects;
+    cursor: pointer;
     float: left;
 }
 
 #projects-hover {
-    @include hover;
-    background-color: #662D91;
+    @include projects;
+    @include tile-hover;
+    position: absolute;
+    background-color: rgba(102, 45, 145, 0.5);
+    display: none;
 
-    .title {
-        color: white;
+    .title {        
         font-size: 20pt;
     }
 
     .body {
+        width: 350px;
 
-    }    
+        a {
+            color: #21DCFF;
+        }
+    }
+
+    .icon {
+        width: 50px;
+        bottom: 10px;
+        right: 10px;
+    }
 }

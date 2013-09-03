@@ -4,6 +4,9 @@
   background-image: url("../images/bg.png");
   position: relative;
 }
+#main img {
+  position: absolute;
+}
 
 #main-1 {
   float: right;
@@ -13,74 +16,141 @@
   margin-bottom: 20px;
 }
 
+.blur {
+  display: none;
+}
+
 #about-me-tile {
   height: 340px;
   width: 580px;
+  cursor: pointer;
   float: left;
-  background-image: url("../images/about-me.png");
 }
 
 #about-me-hover {
-  height: 100%;
-  width: 100%;
-  opacity: 0.8;
-  background-color: #8CC63F;
+  height: 340px;
+  width: 580px;
+  position: absolute;
+  background-color: rgba(140, 198, 63, 0.5);
+  display: none;
 }
 #about-me-hover .title {
+  height: 100%;
+  width: 200px;
   color: white;
   font-size: 32pt;
+  float: left;
+  padding: 20px;
+}
+#about-me-hover .body {
+  height: 100%;
+  width: 380px;
+  float: right;
+  font-size: 16pt;
+  padding-top: 75px;
+}
+#about-me-hover .body a {
+  color: white;
+}
+#about-me-hover .icon {
+  bottom: 20px;
+  left: 20px;
 }
 
 #resume-tile {
   height: 160px;
   width: 140px;
-  background-image: url("../images/resume.png");
+  cursor: pointer;
   float: left;
 }
 
 #resume-hover {
-  height: 100%;
-  width: 100%;
-  opacity: 0.8;
-  background-color: #ED1C24;
+  height: 160px;
+  width: 140px;
+  position: absolute;
+  background-color: rgba(255, 18, 26, 0.5);
+  display: none;
+}
+#resume-hover div {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: white;
 }
 #resume-hover .title {
-  color: white;
   font-size: 20pt;
+}
+#resume-hover .icon {
+  width: 50px;
+  bottom: 35px;
+  left: 45px;
 }
 
 #stuff-tile {
   height: 160px;
   width: 264px;
-  background-image: url("../images/stuff.png");
+  cursor: pointer;
   float: right;
 }
 
 #stuff-hover {
-  height: 100%;
-  width: 100%;
-  opacity: 0.8;
-  background-color: #00A99D;
+  height: 160px;
+  width: 264px;
+  position: absolute;
+  height: 160px;
+  width: 264px;
+  background-color: rgba(0, 169, 157, 0.5);
+  display: none;
+}
+#stuff-hover div {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: white;
 }
 #stuff-hover .title {
-  color: white;
   font-size: 20pt;
+}
+#stuff-hover .body {
+  width: 200px;
+}
+#stuff-hover .body a {
+  color: black;
+}
+#stuff-hover .icon {
+  width: 50px;
+  bottom: 10px;
+  right: 10px;
 }
 
 #projects-tile {
   height: 160px;
   width: 424px;
-  background-image: url("../images/projects.png");
+  cursor: pointer;
   float: left;
 }
 
 #projects-hover {
-  height: 100%;
-  width: 100%;
-  opacity: 0.8;
-  background-color: #662D91;
+  height: 160px;
+  width: 424px;
+  position: absolute;
+  background-color: rgba(102, 45, 145, 0.5);
+  display: none;
+}
+#projects-hover div {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: white;
 }
 #projects-hover .title {
-  color: white;
   font-size: 20pt;
+}
+#projects-hover .body {
+  width: 350px;
+}
+#projects-hover .body a {
+  color: #21DCFF;
+}
+#projects-hover .icon {
+  width: 50px;
+  bottom: 10px;
+  right: 10px;
 }

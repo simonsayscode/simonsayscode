@@ -79,13 +79,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    uglify: {
-      rel: {
-        files: {
-          'public/javascript/output.min.js': ['*.js', '!*.min.js']
-        }
-      }
-    },
     cssmin: {
       combine:{
         files: {
@@ -93,7 +86,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    clean: ["public/css/*.min.css", "public/javascript/*.min.js"]
+    clean: ["public/css/*.min.css", "public/js/*.min.js"]
   });
 
   // These plugins provide necessary tasks.
@@ -102,7 +95,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-node-inspector');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
@@ -110,6 +102,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['cssmin', 'sass:dev', 'concurrent']);
 
   // Release task.
-  grunt.registerTask('release', ['clean', 'sass:rel', 'uglify:rel', 'cssmin']);
+  grunt.registerTask('release', ['clean', 'sass:rel', 'cssmin']);
 
 };
