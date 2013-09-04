@@ -44,9 +44,7 @@ define(['jquery', './content'], function ($, content) {
             }
         });
 
-        $('.tile').on('click', function (event) {
-            content($(event.currentTarget).attr('id'));
-        });
-
+        // hooking up event handler for content click
+        $('.tile').on('click', content.contentClick);
     });
 });

@@ -1,0 +1,48 @@
+#content-layout {
+    position: absolute;
+    top: 170px;
+    width: 1024px;
+    height: 100%;
+    background-color: rgba(72, 86, 85, 0.9);
+}
+
+#content {
+    float: left;
+}
+
+#close-btn {
+    float: right;
+    background-color: #00A99D;
+    font-size: 24px;
+    padding: 5px 20px;
+    font-weight: 300;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+    }
+}
+
+#navbar {
+    float: right;
+
+    ul {
+        font-size: 19px;
+        color: white;
+        float: right;
+        clear: both;
+        list-style-type: none;
+        text-align: right;
+    }
+
+    li {
+        padding: 10px 10px;
+    }
+}
+
+h1 {
+    color: #CCC;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 15px 20px;
+}

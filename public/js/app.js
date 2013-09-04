@@ -10,5 +10,4 @@ requirejs.config({
     }
 });
 
-// Load the index app module to start the app
-requirejs(['app/index']);
+requirejs(['app/index', 'app/content']);

@@ -9,6 +9,20 @@ exports.index = function (req, res) {
     });
 };
 
+var contentlayout = require('../views/layouts/contentlayout');
 exports.contentlayout = function (req, res) {
-    res.send(require('../views/layouts/contentlayout')());
+    res.send(contentlayout());
+};
+
+var content = {
+    'about-me': require('../views/about-me'),
+    'projects': require('../views/projects'),
+    'resume': require('../views/resume'),
+    'stuff': require('../views/stuff')
+};
+exports.content = function (req, res) {
+    var id = req.params.id;
+    if (id) {   
+        res.send(content[id]());
+    }
 };
