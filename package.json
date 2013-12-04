@@ -11,10 +11,11 @@
   "dependencies": {
     "express": "3.3.x",
     "hbs": "2.3.x",
-    "underscore": "1.5.x"
+    "underscore": "1.5.x",
+    "grunt": "~0.4.1",
+    "grunt-cli": "x.x.x"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
     "grunt-contrib-sass": "~0.5.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-nodemon": "~0.1.0",
@@ -23,5 +24,6 @@
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-clean": "~0.5.0"
-  }
+  },
+  "postinstall": "./node_modules/.bin/grunt"
 }
